@@ -1,0 +1,239 @@
+html, body, p, ul {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input[type=radio] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+body {
+  font-family: 'PT Sans', sans-serif
+}
+
+.phone {
+  width: 600px;
+  height: 1068px;
+  background: url(../img/Quiz.png) no-repeat center;
+  background-size: contain;
+  position: relative;
+  margin: 0 auto;
+
+}
+.pollContent {
+  background: rgba(0,0,0,.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 1;
+  visibility: visible;
+  transition: .7s;
+
+
+}
+.pollContent.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.pollContent form, .form {
+    width: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0,0,0,.2);
+    background: #fff;
+    margin: 50px auto;
+
+}
+.pollContent .heading {
+    font-size: 3.2vh;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    padding: 80px;
+    position: relative;
+}
+.pollContent .heading span {
+  position: relative;
+  z-index: 2
+
+}
+.pollContent .heading #close {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0,0,0,.4);
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  text-align: center;
+  line-height: 27px;
+  z-index: 3;
+  border-radius: 50%;
+  font-size: 30px;
+  font-weight: 400;
+  font-family: monospace;
+  transform: rotate(45deg);
+  user-select: none;
+  cursor: pointer;
+}
+.pollContent .heading:after {
+  content: '';
+  width: 2000px;
+  height: 2000px;
+  left: calc(50% - 1000px);
+  bottom: 0;
+  border-radius: 50%;
+  display: block;
+  background: url(../img/hands.png) center 105%  #ec324a;
+  position: absolute;
+  z-index: 1;
+}
+.pollContent .wrapper {
+  padding: 40px 25px
+
+}
+
+.pollContent ul, .results {
+    list-style: none;
+}
+.pollContent ul {
+    margin-bottom: 40px;
+}
+.pollContent .total_votes {
+  margin-bottom: 12px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+}
+.pollContent .message {
+  text-align: center;
+  font-weight: 600;
+  font-size: 24px;
+  margin-top: 8px;
+}
+.pollContent ul li {
+  border-radius: 40px;
+  border: 1px solid #c9c9c9;
+  margin-bottom: 10px;
+  outline: none;
+}
+.pollContent ul li label, ul.results li {
+  padding: 20px 24px;
+  padding-left: 70px;
+  display: block;
+  font-size: 2vh;
+  font-weight: 400;
+  cursor: pointer;
+  position: relative;
+}
+
+ul.results li {
+  cursor: default;
+  overflow: hidden;
+  font-size: 21px;
+}
+ul.results li .label {
+  position: relative;
+  z-index: 2
+}
+ul.results li .percentage {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  z-index: 2;
+  font-weight: 600;
+  margin-right: 5px
+}
+ul.results li .progressbar {
+  width: 0%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #EC323F;
+  z-index: 1
+}
+
+.pollContent ul li input {
+  border-radius: 50%;
+  border: 2px solid #c9c9c9;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  outline: none;
+  transition: .3s
+}
+.pollContent ul li input:checked {
+  border: 2px solid #ec324a;
+}
+.pollContent ul li.active {
+  border-color: #e3e3e3
+}
+.pollContent ul li input:checked:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  border-radius: 50%;
+  background: #ec324a;
+}
+.pollContent .button {
+  border: none;
+  font-size: 26px;
+  font-weight: 700;
+  border-radius: 40px;
+  color: #fff;
+  padding: 24px;
+  background-color: #444;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  pointer-events: none;
+  transition: .3s;
+  position: relative;
+}
+a #close {
+  outline: none;
+}
+.pollContent .button .icon {
+  position: absolute;
+  background: rgba(0,0,0,.2);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  top: 11px;
+  left: 14px;
+  line-height: 74px;
+  text-indent: 5px
+}
+.pollContent .button #ico {
+  fill: #454545;
+  transition: .3s
+}
+.pollContent .button.active {
+  pointer-events: all;
+  background-color: #628ef1;
+  outline: none;
+}
+.pollContent .button.active #ico {
+  fill: #fff
+}
+.stmsg {
+  font-size: 16px;color:#FBBC05;
+}
